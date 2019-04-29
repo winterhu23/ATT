@@ -1,0 +1,100 @@
+h1{/*元素选择器*/
+    color: crimson;
+}
+.left{
+    background-color: darkkhaki;
+    color: white;
+    height: 305px;
+    width: 50%;
+    float: left;
+}
+.right{
+    background-color: chartreuse;
+    color: white;
+    height: 305px;
+    width: 50%;
+    float: right;
+}
+.medium{/*类选择器*/
+    background-color: cornflowerblue;
+    height: 450px;
+    width: 100%;
+}
+#down{
+    background-color: gold;
+    color: white;
+    height: 230px;
+    width: 100%;
+}
+#right_result{
+    color: white;
+    
+}
+.clearfix:after{/*笔记伪元素 不兼容IE6还需要使用hasLayout来处理*/
+    /*添加一个内容*/
+    content: "";
+    /*转换为一个块元素*/
+    display: block;
+    /*清除两边浮动*/
+    clear: both;
+}
+
+table,tr,td{
+    border-collapse:collapse;
+    border: 1px black solid;
+    height:30px;
+    font: bold 20px "微软雅黑";
+}
+
+.table1 td{
+    width: 80%;
+}
+input{
+    height: 50px;
+    font: bold 20px "微软雅黑";
+}
+.button1{
+   width:50px;
+   height:50px;
+   background-color:pink;
+   border-radius:30px;
+}
+.button2{
+    width:70px;
+   height:50px;
+   background-color:yellowgreen;
+}
+.img1{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: pink;
+}
+.img2{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: blueviolet;
+}
+.img3{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: coral;
+}
+.img4{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: cadetblue;
+}
+.img5{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+}
+#str{
+    text-align: center;
+    font: bold 20px/10px "微软雅黑";
+}
