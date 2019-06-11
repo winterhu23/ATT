@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login_style.css" type="text/css">
+</head>
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <form id="login_form" method="POST" action="/" autocomplete="off">
+            <div class="inputBox">
+                <input type="text" name="username" id="username" required oninvalid="setCustomValidity('Please input your username');" oninput="setCustomValidity('');">
+                <label for="">Username</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" id="password" required oninvalid="setCustomValidity('Please input your password');" oninput="setCustomValidity('');">
+                <label for="">Password</label>
+            </div>
+            <div class="registerBox"><a href="#"><input type="button" name="" value="Forget"></a></div>
+            <div class="submitBox"><input type="submit" name="" value="Submit"></div>
+            <div class="registerBox"><a href="/register"><input type="button" name="" value="Register"></a></div>
+            
+        </form>
+    </div>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $('#login_form').on('submit', function (e) {
+          //它的作用是：事件处理过程中，不阻击事件冒泡，但阻击默认行为
+          e.preventDefault()
+          var formData = $(this).serialize()
+          //console.log(formData)
+          $.ajax({
+            url: '/',
+            type: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+              console.log(data)
+              var err_code = data.err_code
+              if (err_code === 0) {
+                // window.alert('注册成功！')
+                // 服务端重定向针对异步请求无效
+                console.log(123)
+                window.location.href = '/card'
+              } 
+            }
+          })
+        })
+      </script>
+</body>
+</html>
